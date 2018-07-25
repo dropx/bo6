@@ -20,7 +20,7 @@
   "author": "knil-nissim <knilnissim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap --concurrency=1"
+    "boot": "lerna bootstrap --concurrency=1"
   },
   "devDependencies": {
     "dotenv": "^6.0.0",

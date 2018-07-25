@@ -18,6 +18,7 @@ Before you get started, you need to be equipped with these tools
 * [Solidity](http://solidity.readthedocs.io/en/v0.4.24/installing-solidity.html)
 
 Install all of smart contracts and dapps dependencies
+> Recommend to use yarn instead of npm since lerna uses yarn configuration
 ```bash
-yarn # recommend to use yarn instead of npm since lerna uses yarn configuration
+yarn && yarn boot
 ```
