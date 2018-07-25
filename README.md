@@ -1,5 +1,5 @@
-# B06
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/dropx/bo6.svg?columns=all)](https://waffle.io/dropx/bo6)
+# BO6
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/dropx/bo6.svg?columns=all)](https://waffle.io/dropx/bo6) [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
 
 This repository is mono-repo that contains the following smart contracts and dapps:
 
@@ -19,5 +19,5 @@ Before you get started, you need to be equipped with these tools
 
 Install all of smart contracts and dapps dependencies
 ```bash
-yarn # or npm install
+yarn # recommend use yarn instead of npm since lerna use yarn configuration
 ```

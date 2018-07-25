@@ -1,9 +1,11 @@
 {
   "lerna": "2.11.0",
+  "useWorkspaces": true,
   "packages": [
     "dapps/*",
     "smart-contracts/*",
     "shared/*"
   ],
+  "npmClient": "yarn",
   "version": "independent"
 }
