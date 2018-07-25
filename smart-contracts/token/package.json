@@ -1,0 +1,20 @@
+{
+  "name": "@bo6/smart-contract-token",
+  "version": "0.1.0",
+  "description": "...",
+  "author": "knil-nissim <knilnissim@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": ""
+  },
+  "devDependencies": {
+    "@bo6/helpers": "^0.1.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+  }
+}

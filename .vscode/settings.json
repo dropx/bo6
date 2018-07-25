@@ -1,0 +1,10 @@
+{
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.autoIndent": true,
+  "[solidity]": {
+    "editor.tabSize": 4,
+  },
+  "git.ignoreLimitWarning": true,
+  "files.insertFinalNewline": true
+}
