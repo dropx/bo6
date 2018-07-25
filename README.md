@@ -19,5 +19,5 @@ Before you get started, you need to be equipped with these tools
 
 Install all of smart contracts and dapps dependencies
 ```bash
-yarn # recommend use yarn instead of npm since lerna use yarn configuration
+yarn # recommend to use yarn instead of npm since lerna uses yarn configuration
 ```
