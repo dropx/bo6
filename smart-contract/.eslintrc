@@ -7,7 +7,7 @@
     "promise"
   ],
   "env": {
-    "browser" : true,
+    "browser" : false,
     "node"    : true,
     "mocha"   : true,
     "jest"    : true

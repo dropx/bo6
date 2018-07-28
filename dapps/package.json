@@ -1,8 +1,10 @@
 {
-  "name": "@bo6/helpers",
+  "name": "@bo6/dapp",
   "version": "0.1.0",
   "description": "...",
   "author": "knil-nissim <knilnissim@gmail.com>",
   "license": "MIT",
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {}
 }
