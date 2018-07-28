@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "@bo6/monorepo-packages",
   "version": "0.1.0",
   "repository": {
@@ -6,32 +7,27 @@
     "url": "https://github.com/dropx/bo6"
   },
   "keywords": [
+    "CryptoDolbom",
+    "BO6",
+    "hackathon",
     "solidity",
     "ethereum",
     "smart",
-    "contracts"
-  ],
-  "private": true,
-  "workspaces": [
-    "dapps/*",
-    "smart-contracts/*",
-    "shared/*"
+    "contracts",
+    "DApp"
   ],
   "author": "knil-nissim <knilnissim@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "boot": "lerna bootstrap --concurrency=1"
+    "install": "npm run boot",
+    "boot": "lerna bootstrap",
+    "clean": "lerna clean --yes && rm -rf node_modules && rm -f package-lock.json",
+    "migrate": "lerna run --stream --scope=@bo6/smart-contract migrate",
+    "coverage": "lerna run --stream --scope=@bo6/smart-contract coverage"
   },
   "devDependencies": {
     "dotenv": "^6.0.0",
-    "eslint": "^5.2.0",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "ganache-cli": "^6.1.6",
-    "lerna": "^2.11.0",
-    "solium": "^1.1.8"
+    "eslint": "^5.1.0",
+    "lerna": "^2.11.0"
   }
 }
