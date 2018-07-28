@@ -7,9 +7,10 @@ This repository is mono-repo that contains the following smart contracts and dap
 - **[Web App](dapps/webapp)**: Web app.
 
 ## Introduction
-...
+- [plan docs](https://docs.google.com/document/d/1_mhb04zPNuOcZFmeazGz4XH7Qar_MiYVaHxaVq1kodM/edit#)
 
 ## Development
+- [dev docs](https://docs.google.com/document/d/14wcXkVNGeUOjDiSbTn-CRw1tl4MJhCBhLyCaTN-ht08/edit#)
 
 #### Getting started
 Before you get started, you need to be equipped with these tools
@@ -22,7 +23,9 @@ Install all of smart contracts and dapps dependencies
 ```bash
 yarn && yarn boot
 ```
-## Members
-* gulifeny 
-* reno89
 
+## Members
+* knilnissim
+* gulifeny
+* reno89
+* jonjee
