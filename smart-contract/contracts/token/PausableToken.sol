@@ -4,7 +4,7 @@ import "openzeppelin-solidity/contracts/token/ERC20/StandardToken.sol";
 import "openzeppelin-solidity/contracts/lifecycle/Pausable.sol";
 
 
-contract TransferPausable is StandardToken, Pausable {
+contract PausableToken is StandardToken, Pausable {
 
     function transfer(address _to, uint256 _value) public whenNotPaused returns (bool) {
         return super.transfer(_to, _value);

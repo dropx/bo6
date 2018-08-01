@@ -1,13 +1,13 @@
 pragma solidity ^0.4.21;
 
-import "../BO6Token.sol";
+import "../token/PausableToken.sol";
 
 
 /**
- * @title BO6TokenMock
+ * @title PausableTokenMock
  * @dev Mocking contract of BO6Token
  */
-contract BO6TokenMock is BO6Token {
+contract PausableTokenMock is PausableToken {
 
     function mockMintToken(address _to, uint256 _balacne) public returns (bool) {
         totalSupply_ = totalSupply_.add(_balacne);

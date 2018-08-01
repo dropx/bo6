@@ -1,6 +1,6 @@
 import chai from 'chai';
 
-const BO6Token = artifacts.require('BO6TokenMock');
+const PausableToken = artifacts.require('PausableTokenMock');
 const BigNumber = web3.BigNumber;
 
 chai.use(require('chai-as-promised'))
@@ -9,13 +9,13 @@ chai.use(require('chai-as-promised'))
 
 const bo6 = n => new BigNumber(web3.toWei(n, 'ether')); // n BO6 = n * 10^18 BO6wei
 
-contract('BO6Token', function (accounts) {
+contract('PausableToken', function (accounts) {
   const [owner, nonOwner, anotherNonOwner] = accounts;
   const initialTokenBalance = bo6(29);
   const transferTokenAmount = bo6(11);
 
   beforeEach(async function () {
-    this.token = await BO6Token.new();
+    this.token = await PausableToken.new();
     await this.token.mockMintToken(owner, initialTokenBalance);
     await this.token.mockMintToken(nonOwner, initialTokenBalance);
     await this.token.mockMintToken(anotherNonOwner, initialTokenBalance);
