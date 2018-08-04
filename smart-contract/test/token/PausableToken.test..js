@@ -1,9 +1,8 @@
-import chai from 'chai';
-
 const PausableToken = artifacts.require('PausableTokenMock');
 const BigNumber = web3.BigNumber;
 
-chai.use(require('chai-as-promised'))
+require('chai')
+  .use(require('chai-as-promised'))
   .use(require('chai-bignumber')(BigNumber))
   .should();
 
