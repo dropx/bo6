@@ -1,10 +1,9 @@
-import expectEvent from 'openzeppelin-solidity/test/helpers/expectEvent';
-import chai from 'chai';
-
+const expectEvent = require('./helpers/expectEvent');
 const Sample = artifacts.require('Sample');
 const BigNumber = web3.BigNumber;
 
-chai.use(require('chai-as-promised'))
+require('chai')
+  .use(require('chai-as-promised'))
   .use(require('chai-bignumber')(BigNumber))
   .should()
 

@@ -1,4 +1,6 @@
-require('babel-register');
+require('babel-register')({
+  ignore: /node_modules\/(?!openzeppelin-solidity\/test\/helpers)/
+});
 require('babel-polyfill');
 
 // to set envrionment variables, use the `.env` file in the same path as this file.
@@ -17,8 +19,8 @@ const getProvider = (
   addressIndex = 0,
   numAddresses = 5
 ) => !useSolidityCoverage
-  ? () => new HDWalletProvider(mnemonic, providerUrl, addressIndex, numAddresses)
-  : console.log('use solcover') && undefined; // https://github.com/sc-forks/solidity-coverage/blob/master/docs/faq.md#using-alongside-hdwalletprovider
+    ? () => new HDWalletProvider(mnemonic, providerUrl, addressIndex, numAddresses)
+    : console.log('use solcover') && undefined; // https://github.com/sc-forks/solidity-coverage/blob/master/docs/faq.md#using-alongside-hdwalletprovider
 
 const devProvider = getProvider('http://localhost:8545');
 const testnetProvider = getProvider(`https://ropsten.infura.io/${infuraKey}`);
