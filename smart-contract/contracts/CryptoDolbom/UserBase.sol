@@ -8,13 +8,14 @@ contract UserBase {
         string userName;
         uint birthYear;
         Gender gender;
-        uint kycHashuint;
+        uint kycHash;
         uint fullNameHash;
     }
 
     User[] public users;
     mapping(uint => address) public userIdToAddress;
     mapping(address => uint) public addressToUserId;
+    mapping(uint => address) public kycHashToAddress;
 
     function signUp (
         string _userName,
@@ -34,6 +35,21 @@ contract UserBase {
         userIdToAddress[userId] = msg.sender;
         addressToUserId[msg.sender] = userId;
        
+        return true;
+    }
+    function processKyc (
+        address _userAddress,
+        uint _kycHash,
+        uint _fullNameHash
+    )
+        public
+        returns (bool)
+    {
+        require(kycHashToAddress[_kycHash] == 0);
+        uint userId = addressToUserId[_userAddress];
+        users[userId].kycHash = _kycHash; 
+        users[userId].fullNameHash = _fullNameHash; 
+        kycHashToAddress[_kycHash] = _userAddress;
         return true;
     }
 }
