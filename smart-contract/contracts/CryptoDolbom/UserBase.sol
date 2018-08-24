@@ -52,4 +52,14 @@ contract UserBase {
         kycHashToAddress[_kycHash] = _userAddress;
         return true;
     }
+    function updateUserName (
+        uint _userId,
+        string _newUserName
+    )
+        public
+        returns (bool)
+    {
+        users[_userId].userName = _newUserName;
+        return true;
+    }
 }

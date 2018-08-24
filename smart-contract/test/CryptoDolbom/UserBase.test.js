@@ -101,4 +101,25 @@ contract('UserBase', function (accounts) {
       });
     });
   });
+  describe('updateUserName', async function () {
+    context('when user is signed up', async function () {
+      beforeEach(async function () {
+        const userName = 'Joe Cool';
+        const birthYear = 1999;
+        const gender = Gender.M;
+        await this.userBase.signUp(userName, birthYear, gender, { from: nonOwner }).should.be.fulfilled;
+      });
+      it('update username', async function () {
+        const userAddress = nonOwner; 
+        const newUserName = 'dropx'
+
+        const userId = await this.userBase.addressToUserId( userAddress);
+
+        await this.userBase.updateUserName( userId, newUserName);
+        const user = await this.userBase.users(userId);
+        user[0].should.be.equal(newUserName);
+
+      });
+    });
+  });
 });
